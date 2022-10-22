@@ -1,0 +1,242 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+
+}
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 ;
+    border-radius: 10px;
+    height: 100vh;
+}
+
+body.active{
+    background-color: white;
+
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 130vh;
+
+}
+
+
+.quotes{
+    font-size: 17px;
+    font-style: oblique;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 25px;
+    text-align: center; 
+    color: white;
+}
+
+
+/*/400/*/
+
+.button, .Audios{
+    background-color: #ffffffbf;
+    height: 52px;
+    display: inline;
+    width: 163px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    transition: 1s;
+    color: black;
+}
+
+.Audios.active{
+    background-color: #100202;
+    height: 52px;
+    display: inline;
+    width: 163px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    transition: 1s;
+    color: white;
+    box-shadow: inset 10px 10px 10px black, 
+    inset -10px -10px 10px black;   
+    transition: 0.1s;
+}
+.button.active:hover{
+    background-color: blue;
+}
+.Audios.active:hover{
+    background-color: blue;
+}
+.button.active{
+    background-color: #100202;
+    height: 52px;
+    display: inline;
+    width: 163px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    transition: 1s;
+    color: white;
+    box-shadow: inset 10px 10px 10px black, 
+    inset -10px -10px 10px black;   
+    transition: 0.1s;
+}
+
+.button:hover {
+    opacity: 0.5;
+    box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.200);
+    transform: translatey(1px);
+    background-color: blueviolet;
+}
+
+.Audios:hover {
+    opacity: 0.5;
+    box-shadow: inset 10px 10px 10px rgba(255, 255, 255, 0.200);
+    transform: translatey(1px);
+    background-color: blueviolet;
+}
+
+img{
+    height: 143px;
+    object-fit: cover;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+
+}
+img.active .button{
+    animation: shiva 4s forwards ease-in-out alternate-reverse ;
+}
+
+.quotes.active{
+    color: black;
+    font-size: 19px;
+}
+
+.para{
+    color: orangered;
+    font-size: 24px;
+    text-align: center;
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: para 2s forwards ease-in-out alternate-reverse infinite;
+}
+.toggle{
+    color: rgb(232, 4, 4);
+    text-align: center;
+}
+.toggle.active {
+    color: blue;
+}
+
+.author.active{
+    color: blue;
+}
+
+
+.author{
+    
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 19px;
+    animation: author 2s forwards ease-in-out alternate-reverse infinite;
+}
+
+.object{
+    display: flex;
+    padding-top: 20px;
+}
+.source{
+    font-size: 19px;
+    font-style: italic;
+    font-weight: bold; 
+    padding-right: 10px;
+    color: white;
+}
+.source.active{
+    font-size: 19px;
+    font-style: italic;
+    font-weight: bold; 
+    padding-right: 10px;
+    color: black;
+}
+
+/*/ animation for lord shiva text/*/
+
+@keyframes shiva {
+   0%{ transform: rotateX(0deg)}
+  
+
+   100% {transform: rotateX(45deg);}
+}
+
+@keyframes author {
+    0%{ transform: translatex(-9px)}
+   
+ 
+    100% {transform: translatex(19px);}
+ }
+
+@keyframes para {
+    0%{opacity: 0;}
+    30%{opacity: 0.3;}
+    40%{opacity: 0.4;}
+    50%{opacity: 0.5;}
+    55%{color: white;}
+    60%{opacity: 0.6;}
+    70%{opacity: 0.7;}
+    80%{opacity: 0.8, }
+  90%{color: white}
+  95%{color: orangered;}
+ 100%{opacity: 1;}
+ }
+ 
+ 
+
+@media screen and (max-width: 377px){
+
+
+    section{
+     width: 314px;
+    }
+    p{
+        font-size: 15px;
+        line-height: revert;
+        text-align: center;
+        width: fit-content;
+        color: white; 
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+span{
+    color: orangered;
+    font-size: 2rem;
+}
+
+/*/314
