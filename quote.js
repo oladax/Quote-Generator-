@@ -61,8 +61,17 @@ audio.onclick = () =>{
 	const value = (quotes.innerText)
 	const Author = (author.innerText)
 
-	responsiveVoice.speak(value)
-	responsiveVoice.speak(Author)
+	var speech = new SpeechSynthesisUtterance();
+
+    // defing speech properties
+    speech.lang =  "en-NG";
+    speech.text = `${value}` + `${Author}`;
+    speech.volume = 30;
+    speech.pitch = 1;
+    speech.rate = 1;
+
+
+    window.speechSynthesis.speak(speech)
 	img.classList.toggle('active')
 
 }
